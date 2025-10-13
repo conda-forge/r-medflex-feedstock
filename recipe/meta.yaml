@@ -1,4 +1,4 @@
-{% set version = '0.6-10' %}
+{% set version = "0.6-11" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/medflex_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/medflex/medflex_{{ version }}.tar.gz
-  sha256: bd89a8fe939f3becd71a9dab30fe27fa43c96572d8309d2c1a70633117d4cb33
+  sha256: b6a1c6ae0794c4259bcd60291d45fac37a18e50115f987554242049fa58dc71f
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -45,10 +45,7 @@ test:
 about:
   home: https://github.com/jmpsteen/medflex
   license: GPL-2.0-only
-  summary: Run flexible mediation analyses using natural effect models as described in Lange,
-    Vansteelandt and Bekaert (2012) <DOI:10.1093/aje/kwr525>, Vansteelandt, Bekaert
-    and Lange (2012) <DOI:10.1515/2161-962X.1014> and Loeys, Moerkerke, De Smet, Buysse,
-    Steen and Vansteelandt (2013) <DOI:10.1080/00273171.2013.832132>.
+  summary: Run flexible mediation analyses using natural effect models as described in Lange, Vansteelandt and Bekaert (2012) <DOI:10.1093/aje/kwr525>, Vansteelandt, Bekaert and Lange (2012) <DOI:10.1515/2161-962X.1014> and Loeys, Moerkerke, De Smet, Buysse, Steen and Vansteelandt (2013) <DOI:10.1080/00273171.2013.832132>.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
